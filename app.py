@@ -14,6 +14,7 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     mars = mongo.db.mars.find_one()
+    print("Here Here ",mars)
     return render_template('index.html', mars=mars)
 
 # Set up scrapingroute
